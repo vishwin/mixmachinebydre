@@ -1,0 +1,5 @@
+*.py[cod]
+config.py
+*~
+*.sh
+*.wsgi
