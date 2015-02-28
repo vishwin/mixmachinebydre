@@ -30,7 +30,10 @@
 
 # and some help from the capitalist pigs at O'Reilly
 
-import RPi.GPIO as GPIO
+try:
+	import RPi.GPIO as GPIO
+except RuntimeError:
+	print("Error importing RPi.GPIO! This is probably because you need root privileges.")
 import time
 
 def setup(servos):
