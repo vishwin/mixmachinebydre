@@ -62,8 +62,8 @@ def pour(instructions):
     flowRate = 2 # seconds per milliliter
     amounts = [(float(volume) * instructions[x]) for
                x in list(range(1, len(instructions)))]
-    flowTimes = [flowRate * amount for amount in amounts]
-    for i in len(flowTimes):
+    flowTimes = [(flowRate * amount) for amount in amounts]
+    for i in list(range(len(flowTimes))):
         update(i+1, 180, pwm)
         time.sleep(turnTime)
         time.sleep(flowTimes[i])
