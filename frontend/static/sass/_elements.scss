@@ -1,0 +1,135 @@
+@mixin centered-pane($width, $height) {
+	height: $height;
+	width: $width;
+	position: absolute;
+	top: calc((100% - #{$height})/2);
+	left: calc((100% - #{$width})/2);
+}
+
+@mixin button-bg {
+	@include transition(background-color 0.5s ease);
+	background-color: rgba(255, 255, 255, 0.1);
+	&:hover { background-color: rgba(255, 255, 255, 0.3) }
+}
+
+@mixin circular-bttn($size) {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	@include border-radius($size);
+	border: 1px solid #fff;
+	width: $size;
+	height: $size;
+	text-align: center;
+	@include button-bg;
+}
+
+@mixin rect-bttn($width) {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	@include border-radius(15px);
+	border: 1px solid #fff;
+	width: $width;
+	text-align: center;
+	@include button-bg;
+}
+
+.rect-bttn {
+	@include rect-bttn(100%);
+}
+
+// **** RANGE SLIDER ****
+$slider-width: 100%;
+$slider-height: 5px;
+$slider-bg: #eee;
+$slider-thumb-color: #4e88ff;
+input[type=range] {
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+    
+    /*fix for FF unable to apply focus style bug */
+    border: 1px solid white;
+    
+    /*required for proper track sizing in FF*/
+    width: $slider-width;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: $slider-width;
+    height: $slider-height;
+    background: $slider-bg;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $slider-thumb-color;
+    margin-top: -4px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: $slider-bg;
+}
+
+input[type=range]::-moz-range-track {
+    width: $slider-width;
+    height: $slider-height;
+    background: $slider-bg;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $slider-thumb-color;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: $slider-width;
+    height: $slider-height;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: $slider-bg;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $slider-thumb-color;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: $slider-bg;
+}

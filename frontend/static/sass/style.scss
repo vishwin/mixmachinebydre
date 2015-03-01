@@ -1,0 +1,80 @@
+@import "compass";
+
+@import "elements";
+@import "typography";
+
+@import "home_pane";
+@import "mix_pane";
+@import "loading_pane";
+
+body {
+	margin: 0;
+}
+
+// Page fade in
+@include keyframes(fadein) {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+.panes {
+	@include animation(fadein 0.6s normal forwards ease-in-out);
+}
+
+// Animated rising bubbles background
+
+@include keyframes(bgcolors) {
+	0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@include keyframes(bubble-positions) {
+	0%{bottom:-5%}
+    100%{bottom:105%}
+}
+
+.bg {
+	width: 100%;
+	height: 100%;
+	@include background-image(linear-gradient(50deg, #1225d2, #a131a1, #a12e33, #71bb36));
+	background-size: 800% 800%;
+	@include animation(bgcolors 60s ease infinite);
+	z-index: -1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	$bubble-size-base: 20;//px
+	$bubble-size-variance: 8;//px
+	$bubble-opacity-base: 0.1;
+	$bubble-opacity-variance: 0.1;
+
+	.bubble {
+		bottom: 0;
+		border-radius: 100px;
+		position: absolute;
+		@include background-image(linear-gradient(50deg, lighten(#1122bb, 40%), lighten(#3e69d6, 40%), lighten(#a131a1, 40%), lighten(#a12e33, 40%), lighten(#71bb36, 40%)));
+		background-size: 1000% 1000%;
+		@include animation(bgcolors 80s ease infinite);
+	}
+
+	@for $i from 1 through 80 {
+		.bubble:nth-child(#{$i}) {
+			$size: ($bubble-size-base + random($bubble-size-variance) - $bubble-size-variance/2 + px);
+			height: $size;
+			width: $size;
+			left: (random(100) * 1%);
+			$opacity: ($bubble-opacity-base + random(100)/100*$bubble-opacity-variance);
+			opacity: $opacity;
+			@include box-shadow(0px 0px (random(8) + px) (random(4) + px) rgba(255, 255, 255, $opacity));
+			@include animation(bubble-positions (10 + random(8) - 4 + s) linear infinite (-1 * random(10) + s));
+		}
+	}
+}
+
+@media only screen and (max-device-width: 400px) {
+	// Hide most of the bubbles on phones (they kill performance)
+	.bg .bubble:nth-child(n+8) {
+		display: none;
+	}
+}

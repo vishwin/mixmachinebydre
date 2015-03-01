@@ -1,0 +1,93 @@
+.loading-pane {
+	$width: 20em;
+	$height: 20em;
+	@include centered-pane($width, $height);
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	border-radius: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+
+	// Loading spinner adapted from http://tympanus.net/codrops/2012/11/14/creative-css-loading-animations/
+
+	.spinner {
+		/* Size and position */
+		font-size: 150; /* 1em */
+		width: 1em;
+		height: 1em;
+		margin: 50px auto;
+		position: relative;
+		padding: 0;
+
+		/* Styles */
+		list-style: none;
+		border-radius: 50%;
+		border: 2px solid rgba(255,255,255,0.2); /* Subtle white line circling the dots */
+	}
+
+	.spinner li {
+		width: .2em;
+		height: .2em;
+		position: absolute;
+		border-radius: 50%;
+	}
+
+	.spinner li:nth-child(1) {
+		background: #1ed2f1; /* Blue */
+		top: 0;
+		left: 50%;
+		margin-left: -.1em; /* Width/2 */
+		transform-origin: 50% 250%;
+		@include animation(rota 1.13s linear infinite,
+			opa 3.67s ease-in-out infinite alternate);
+	}
+
+	.spinner li:nth-child(2) {
+		background: #ff0022; /* Red */
+		top: 50%; 
+		right: 0;
+		margin-top: -.1em; /* Height/2 */
+		transform-origin: -150% 50%;
+		@include animation(rota 1.86s linear infinite,
+			opa 4.29s ease-in-out infinite alternate);
+	}
+
+	.spinner li:nth-child(3) {
+		background: #fffb0e; /* Yellow */
+		bottom: 0;
+		left: 50%; 
+		margin-left: -.1em; /* Width/2 */
+		transform-origin: 50% -150%;
+		@include animation(rota 1.45s linear infinite,
+			opa 5.12s ease-in-out infinite alternate);
+	}
+
+	.spinner li:nth-child(4) {
+		background: #82ec18; /* Green */
+		top: 50%; 
+		left: 0;
+		margin-top: -.1em; /* Height/2  */
+		transform-origin: 250% 50%;
+		@include animation(rota 1.72s linear infinite,
+			opa 5.25s ease-in-out infinite alternate);
+	}
+
+	@include keyframes(rota) {
+		to { transform: rotate(360deg); }
+	}
+
+	@include keyframes(opa) {
+		12.0% { opacity: 0.80; }
+		19.5% { opacity: 0.88; }
+		37.2% { opacity: 0.64; }
+		40.5% { opacity: 0.52; }
+		52.7% { opacity: 0.69; }
+		60.2% { opacity: 0.60; }
+		66.6% { opacity: 0.52; }
+		70.0% { opacity: 0.63; }
+		79.9% { opacity: 0.60; }
+		84.2% { opacity: 0.75; }
+		91.0% { opacity: 0.87; }
+	}
+}

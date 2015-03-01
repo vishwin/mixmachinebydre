@@ -1,0 +1,30 @@
+.home-pane {
+	$button-width: 18em;
+
+	$height: (1em + $button-width + 1em) + (1em + 1em + 1em);
+	$width: $button-width;
+	@include centered-pane($width, $height);
+
+	.mix-bttn {
+		@include circular-bttn($button-width);
+		display: table;
+
+		span {
+			display: table-cell;
+			vertical-align: middle;
+			font-size: 3em;
+			font-weight: 300;
+			text-transform: uppercase;
+		}
+
+		small {
+			display: block;
+			font-size: 0.33em;
+			font-weight: 100;
+		}
+	}
+
+	.lucky-bttn {
+		width: $button-width;
+	}
+}
