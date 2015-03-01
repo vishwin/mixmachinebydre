@@ -44,7 +44,7 @@ def setup(servos):
 
 def update(ingredient, angle, pwm):
     duty = float(angle) / 10.0 + 2.5
-    pwm[index-1].ChangeDutyCycle(duty)
+    pwm[ingredient-1].ChangeDutyCycle(duty)
 
 def pour(instructions):
     turnTime = 1 # seconds for which servo turns either way
