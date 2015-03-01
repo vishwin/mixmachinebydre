@@ -37,7 +37,7 @@
 import time
 
 def update(ingredient, angle):
-    servoStr = "%u=%u\n" % (servoChannel, position)
+    servoStr = "%u=%u\n" % (ingredient, angle)
 
     with open("/dev/servoblaster", "wb") as f:
         f.write(servoStr)
