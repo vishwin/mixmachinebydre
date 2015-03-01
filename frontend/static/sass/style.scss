@@ -5,7 +5,9 @@
 
 @import "home_pane";
 @import "mix_pane";
+@import "lucky_pane";
 @import "loading_pane";
+@import "rating_pane";
 
 body {
 	margin: 0;
@@ -77,4 +79,9 @@ body {
 	.bg .bubble:nth-child(n+8) {
 		display: none;
 	}
+}
+
+// Hide everything but the first pane
+.panes > div:nth-child(n+2) {
+	display: none;
 }

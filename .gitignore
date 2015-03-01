@@ -4,3 +4,5 @@ config.py
 *.sh
 *.wsgi
 frontend/.sass-cache
+env/
+env3/
