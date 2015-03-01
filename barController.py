@@ -66,6 +66,7 @@ def pour(instructions):
     for i in list(range(len(flowTimes))):
         update(i+1, 180, pwm)
         time.sleep(turnTime)
+        update(i+1, 90, pwm)
         time.sleep(flowTimes[i])
         update(i+1, 0, pwm)
         time.sleep(turnTime)
