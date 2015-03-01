@@ -53,16 +53,16 @@ def pour(instructions):
     volume = instructions[0]
     servos = [1, 2, 3, 4] # channels 17, 18, 21, 22
     for x in list(range(1, 5)):
-        update(x, 90)
+        update(x, 150)
     flowRate = 2 # seconds per milliliter
     amounts = [(float(volume) * instructions[x]) for
                x in list(range(1, len(instructions)))]
     flowTimes = [(flowRate * amount) for amount in amounts]
     for i in list(range(len(flowTimes))):
-        update(i+1, 180)
+        update(i+1, 90)
         time.sleep(turnTime)
-        update(i+1, 90, pwm)
+        update(i+1, 150, pwm)
         time.sleep(flowTimes[i])
-        update(i+1, 0, pwm)
+        update(i+1, 180, pwm)
         time.sleep(turnTime)
-        update(i+1, 90, pwm)
+        update(i+1, 150, pwm)
