@@ -1,0 +1,138 @@
+.mix-pane {
+	$width: 20em;
+	$height: 23em;
+	@include centered-pane($width, $height);
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	border-radius: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	.sliders {
+		padding-top: 1.5em;
+		padding-bottom: 1.5em;
+	}
+
+	.sliders span {
+		display: block;
+		margin-top: 15px;
+	}
+
+	.sliders input {
+		margin-bottom: 5px;
+	}
+
+	.back-bttn {
+		width: 20%;
+		float: left;
+		height: 1.2em;
+	}
+
+	.mix-bttn {
+		width: 72%;
+		float: left;
+		margin-left: 1em;
+	}
+}
+
+// MIX ICON
+
+.mix-icon {
+	width: 200px;
+}
+
+.mix-icon > * {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.mix-icon > * > * {
+	display: inline-block;
+}
+
+// *****************************
+// *********** SHAPES **********
+// *****************************
+
+$shape-opacity: 0.6;
+$shape-color-1: #fff;
+$shape-color-2: #fff;
+$shape-color-3: #fff;
+$shape-color-4: #fff;
+$diamond-size: 50px;
+$star-size: 100px;
+.diamond-1 {
+	width: $diamond-size;
+	height: $diamond-size;
+	background-color: $shape-color-2;
+	opacity: $shape-opacity;
+	@include transform(rotate(45deg));
+}
+.diamond-2 {
+	width: $diamond-size;
+	height: $diamond-size;
+	background-color: $shape-color-2;
+	opacity: $shape-opacity;
+}
+%star {
+	//margin: 50px 0;
+	position: relative;
+	display: block;
+	color: red;
+	width: 0px;
+	height: 0px;
+	border-right:  $star-size/2 solid transparent;
+	border-bottom: 0.35*$star-size  solid $shape-color-3;
+	border-left:   $star-size/2 solid transparent;
+	@include transform(rotate(35deg));
+	opacity: $shape-opacity;
+}
+%star:before {
+	border-bottom: 0.4*$star-size solid $shape-color-3;
+	border-left: 0.15*$star-size solid transparent;
+	border-right: 0.15*$star-size solid transparent;
+	position: absolute;
+	height: 0;
+	width: 0;
+	top: -0.225*$star-size;
+	left: -0.325*$star-size;
+	display: block;
+	content: '';
+	@include transform(rotate(-35deg));
+}
+%star:after {
+	position: absolute;
+	display: block;
+	color: $shape-color-3;
+	top: 0.015*$star-size;
+	left: -0.525*$star-size;
+	width: 0px;
+	height: 0px;
+	border-right: $star-size/2 solid transparent;
+	border-bottom: 0.35*$star-size solid $shape-color-3;
+	border-left: $star-size/2 solid transparent;
+	@include transform(rotate(-70deg));
+	content: '';
+}
+.star-1 { @extend %star }
+.star-1:before { @extend %star:before }
+.star-1:after { @extend %star:after }
+.star-2 {
+	@extend %star;
+	border-bottom: 70px  solid $shape-color-4;
+}
+.star-2:before {
+	@extend %star:before;
+	border-bottom: 80px solid $shape-color-4;
+}
+.star-2:after {
+	@extend %star:after;
+	border-bottom: 70px solid $shape-color-4;
+}
+.star-container {
+	width: $star-size;
+	height: $star-size;
+}
