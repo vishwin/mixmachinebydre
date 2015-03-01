@@ -562,6 +562,37 @@ body {
   margin: 0;
 }
 
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* line 19, ../sass/style.scss */
+.panes {
+  -moz-animation: fadein 0.6s normal forwards ease-in-out;
+  -webkit-animation: fadein 0.6s normal forwards ease-in-out;
+  animation: fadein 0.6s normal forwards ease-in-out;
+}
+
 @-moz-keyframes bgcolors {
   0% {
     background-position: 0% 50%;
@@ -619,7 +650,7 @@ body {
     bottom: 105%;
   }
 }
-/* line 27, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 .bg {
   width: 100%;
   height: 100%;
@@ -637,7 +668,7 @@ body {
   top: 0;
   left: 0;
 }
-/* line 43, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 .bg .bubble {
   bottom: 0;
   border-radius: 100px;
@@ -652,1049 +683,1049 @@ body {
   -webkit-animation: bgcolors 80s ease infinite;
   animation: bgcolors 80s ease infinite;
 }
-/* line 53, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 .bg .bubble:nth-child(1) {
   height: 17px;
   width: 17px;
-  left: 2%;
-  opacity: 0.185;
-  -moz-box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.185);
-  -webkit-box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.185);
-  box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.185);
-  -moz-animation: bubble-positions 14s linear infinite -2s;
-  -webkit-animation: bubble-positions 14s linear infinite -2s;
-  animation: bubble-positions 14s linear infinite -2s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(2) {
-  height: 24px;
-  width: 24px;
-  left: 32%;
-  opacity: 0.112;
-  -moz-box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.112);
-  -webkit-box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.112);
-  box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.112);
-  -moz-animation: bubble-positions 10s linear infinite -2s;
-  -webkit-animation: bubble-positions 10s linear infinite -2s;
-  animation: bubble-positions 10s linear infinite -2s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(3) {
-  height: 22px;
-  width: 22px;
-  left: 37%;
-  opacity: 0.189;
-  -moz-box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.189);
-  -webkit-box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.189);
-  box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.189);
-  -moz-animation: bubble-positions 14s linear infinite -10s;
-  -webkit-animation: bubble-positions 14s linear infinite -10s;
-  animation: bubble-positions 14s linear infinite -10s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(4) {
-  height: 22px;
-  width: 22px;
-  left: 48%;
-  opacity: 0.112;
-  -moz-box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.112);
-  -webkit-box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.112);
-  box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.112);
-  -moz-animation: bubble-positions 9s linear infinite -6s;
-  -webkit-animation: bubble-positions 9s linear infinite -6s;
-  animation: bubble-positions 9s linear infinite -6s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(5) {
-  height: 23px;
-  width: 23px;
-  left: 65%;
-  opacity: 0.194;
-  -moz-box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.194);
-  -webkit-box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.194);
-  box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.194);
-  -moz-animation: bubble-positions 13s linear infinite -4s;
-  -webkit-animation: bubble-positions 13s linear infinite -4s;
-  animation: bubble-positions 13s linear infinite -4s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(6) {
-  height: 24px;
-  width: 24px;
-  left: 89%;
-  opacity: 0.159;
-  -moz-box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.159);
-  -webkit-box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.159);
-  box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.159);
-  -moz-animation: bubble-positions 12s linear infinite -5s;
-  -webkit-animation: bubble-positions 12s linear infinite -5s;
-  animation: bubble-positions 12s linear infinite -5s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(7) {
-  height: 17px;
-  width: 17px;
-  left: 61%;
-  opacity: 0.191;
-  -moz-box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.191);
-  -webkit-box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.191);
-  box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.191);
-  -moz-animation: bubble-positions 9s linear infinite -2s;
-  -webkit-animation: bubble-positions 9s linear infinite -2s;
-  animation: bubble-positions 9s linear infinite -2s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(8) {
-  height: 20px;
-  width: 20px;
-  left: 50%;
-  opacity: 0.129;
-  -moz-box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.129);
-  -webkit-box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.129);
-  box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.129);
-  -moz-animation: bubble-positions 13s linear infinite -9s;
-  -webkit-animation: bubble-positions 13s linear infinite -9s;
-  animation: bubble-positions 13s linear infinite -9s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(9) {
-  height: 18px;
-  width: 18px;
-  left: 56%;
-  opacity: 0.124;
-  -moz-box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.124);
-  -webkit-box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.124);
-  box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.124);
-  -moz-animation: bubble-positions 14s linear infinite -3s;
-  -webkit-animation: bubble-positions 14s linear infinite -3s;
-  animation: bubble-positions 14s linear infinite -3s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(10) {
-  height: 19px;
-  width: 19px;
-  left: 99%;
-  opacity: 0.114;
-  -moz-box-shadow: 0px 0px 3px 4px rgba(255, 255, 255, 0.114);
-  -webkit-box-shadow: 0px 0px 3px 4px rgba(255, 255, 255, 0.114);
-  box-shadow: 0px 0px 3px 4px rgba(255, 255, 255, 0.114);
-  -moz-animation: bubble-positions 13s linear infinite -10s;
-  -webkit-animation: bubble-positions 13s linear infinite -10s;
-  animation: bubble-positions 13s linear infinite -10s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(11) {
-  height: 23px;
-  width: 23px;
-  left: 26%;
-  opacity: 0.159;
-  -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.159);
-  -webkit-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.159);
-  box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.159);
-  -moz-animation: bubble-positions 14s linear infinite -5s;
-  -webkit-animation: bubble-positions 14s linear infinite -5s;
-  animation: bubble-positions 14s linear infinite -5s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(12) {
-  height: 18px;
-  width: 18px;
-  left: 69%;
-  opacity: 0.182;
-  -moz-box-shadow: 0px 0px 3px 4px rgba(255, 255, 255, 0.182);
-  -webkit-box-shadow: 0px 0px 3px 4px rgba(255, 255, 255, 0.182);
-  box-shadow: 0px 0px 3px 4px rgba(255, 255, 255, 0.182);
-  -moz-animation: bubble-positions 12s linear infinite -10s;
-  -webkit-animation: bubble-positions 12s linear infinite -10s;
-  animation: bubble-positions 12s linear infinite -10s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(13) {
-  height: 20px;
-  width: 20px;
-  left: 62%;
-  opacity: 0.165;
-  -moz-box-shadow: 0px 0px 2px 4px rgba(255, 255, 255, 0.165);
-  -webkit-box-shadow: 0px 0px 2px 4px rgba(255, 255, 255, 0.165);
-  box-shadow: 0px 0px 2px 4px rgba(255, 255, 255, 0.165);
-  -moz-animation: bubble-positions 11s linear infinite -2s;
-  -webkit-animation: bubble-positions 11s linear infinite -2s;
-  animation: bubble-positions 11s linear infinite -2s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(14) {
-  height: 24px;
-  width: 24px;
-  left: 56%;
-  opacity: 0.106;
-  -moz-box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.106);
-  -webkit-box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.106);
-  box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.106);
-  -moz-animation: bubble-positions 10s linear infinite -3s;
-  -webkit-animation: bubble-positions 10s linear infinite -3s;
-  animation: bubble-positions 10s linear infinite -3s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(15) {
-  height: 23px;
-  width: 23px;
-  left: 84%;
-  opacity: 0.156;
-  -moz-box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.156);
-  -webkit-box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.156);
-  box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.156);
-  -moz-animation: bubble-positions 9s linear infinite -8s;
-  -webkit-animation: bubble-positions 9s linear infinite -8s;
-  animation: bubble-positions 9s linear infinite -8s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(16) {
-  height: 21px;
-  width: 21px;
-  left: 2%;
-  opacity: 0.134;
-  -moz-box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.134);
-  -webkit-box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.134);
-  box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.134);
-  -moz-animation: bubble-positions 11s linear infinite -9s;
-  -webkit-animation: bubble-positions 11s linear infinite -9s;
-  animation: bubble-positions 11s linear infinite -9s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(17) {
-  height: 18px;
-  width: 18px;
-  left: 91%;
-  opacity: 0.171;
-  -moz-box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.171);
-  -webkit-box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.171);
-  box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.171);
-  -moz-animation: bubble-positions 12s linear infinite -1s;
-  -webkit-animation: bubble-positions 12s linear infinite -1s;
-  animation: bubble-positions 12s linear infinite -1s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(18) {
-  height: 19px;
-  width: 19px;
-  left: 41%;
-  opacity: 0.183;
-  -moz-box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.183);
-  -webkit-box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.183);
-  box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.183);
-  -moz-animation: bubble-positions 10s linear infinite -10s;
-  -webkit-animation: bubble-positions 10s linear infinite -10s;
-  animation: bubble-positions 10s linear infinite -10s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(19) {
-  height: 19px;
-  width: 19px;
-  left: 96%;
-  opacity: 0.143;
-  -moz-box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.143);
-  -webkit-box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.143);
-  box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.143);
-  -moz-animation: bubble-positions 10s linear infinite -2s;
-  -webkit-animation: bubble-positions 10s linear infinite -2s;
-  animation: bubble-positions 10s linear infinite -2s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(20) {
-  height: 19px;
-  width: 19px;
-  left: 20%;
-  opacity: 0.132;
-  -moz-box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.132);
-  -webkit-box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.132);
-  box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.132);
-  -moz-animation: bubble-positions 14s linear infinite -8s;
-  -webkit-animation: bubble-positions 14s linear infinite -8s;
-  animation: bubble-positions 14s linear infinite -8s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(21) {
-  height: 19px;
-  width: 19px;
-  left: 74%;
-  opacity: 0.14;
-  -moz-box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.14);
-  -webkit-box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.14);
-  box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.14);
-  -moz-animation: bubble-positions 9s linear infinite -1s;
-  -webkit-animation: bubble-positions 9s linear infinite -1s;
-  animation: bubble-positions 9s linear infinite -1s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(22) {
-  height: 21px;
-  width: 21px;
-  left: 68%;
-  opacity: 0.121;
-  -moz-box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.121);
-  -webkit-box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.121);
-  box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.121);
-  -moz-animation: bubble-positions 11s linear infinite -9s;
-  -webkit-animation: bubble-positions 11s linear infinite -9s;
-  animation: bubble-positions 11s linear infinite -9s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(23) {
-  height: 22px;
-  width: 22px;
-  left: 90%;
-  opacity: 0.126;
-  -moz-box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.126);
-  -webkit-box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.126);
-  box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.126);
-  -moz-animation: bubble-positions 7s linear infinite -8s;
-  -webkit-animation: bubble-positions 7s linear infinite -8s;
-  animation: bubble-positions 7s linear infinite -8s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(24) {
-  height: 20px;
-  width: 20px;
-  left: 58%;
-  opacity: 0.121;
-  -moz-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.121);
-  -webkit-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.121);
-  box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.121);
-  -moz-animation: bubble-positions 12s linear infinite -10s;
-  -webkit-animation: bubble-positions 12s linear infinite -10s;
-  animation: bubble-positions 12s linear infinite -10s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(25) {
-  height: 17px;
-  width: 17px;
-  left: 54%;
-  opacity: 0.126;
-  -moz-box-shadow: 0px 0px 3px 4px rgba(255, 255, 255, 0.126);
-  -webkit-box-shadow: 0px 0px 3px 4px rgba(255, 255, 255, 0.126);
-  box-shadow: 0px 0px 3px 4px rgba(255, 255, 255, 0.126);
-  -moz-animation: bubble-positions 13s linear infinite -9s;
-  -webkit-animation: bubble-positions 13s linear infinite -9s;
-  animation: bubble-positions 13s linear infinite -9s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(26) {
-  height: 18px;
-  width: 18px;
-  left: 66%;
-  opacity: 0.163;
-  -moz-box-shadow: 0px 0px 3px 4px rgba(255, 255, 255, 0.163);
-  -webkit-box-shadow: 0px 0px 3px 4px rgba(255, 255, 255, 0.163);
-  box-shadow: 0px 0px 3px 4px rgba(255, 255, 255, 0.163);
-  -moz-animation: bubble-positions 11s linear infinite -9s;
-  -webkit-animation: bubble-positions 11s linear infinite -9s;
-  animation: bubble-positions 11s linear infinite -9s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(27) {
-  height: 22px;
-  width: 22px;
-  left: 11%;
-  opacity: 0.134;
-  -moz-box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.134);
-  -webkit-box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.134);
-  box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.134);
-  -moz-animation: bubble-positions 11s linear infinite -1s;
-  -webkit-animation: bubble-positions 11s linear infinite -1s;
-  animation: bubble-positions 11s linear infinite -1s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(28) {
-  height: 20px;
-  width: 20px;
-  left: 52%;
-  opacity: 0.128;
-  -moz-box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.128);
-  -webkit-box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.128);
-  box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.128);
-  -moz-animation: bubble-positions 12s linear infinite -10s;
-  -webkit-animation: bubble-positions 12s linear infinite -10s;
-  animation: bubble-positions 12s linear infinite -10s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(29) {
-  height: 23px;
-  width: 23px;
-  left: 56%;
-  opacity: 0.116;
-  -moz-box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.116);
-  -webkit-box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.116);
-  box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.116);
-  -moz-animation: bubble-positions 8s linear infinite -1s;
-  -webkit-animation: bubble-positions 8s linear infinite -1s;
-  animation: bubble-positions 8s linear infinite -1s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(30) {
-  height: 21px;
-  width: 21px;
-  left: 4%;
-  opacity: 0.165;
-  -moz-box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.165);
-  -webkit-box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.165);
-  box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.165);
-  -moz-animation: bubble-positions 8s linear infinite -5s;
-  -webkit-animation: bubble-positions 8s linear infinite -5s;
-  animation: bubble-positions 8s linear infinite -5s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(31) {
-  height: 23px;
-  width: 23px;
-  left: 69%;
-  opacity: 0.152;
-  -moz-box-shadow: 0px 0px 6px 4px rgba(255, 255, 255, 0.152);
-  -webkit-box-shadow: 0px 0px 6px 4px rgba(255, 255, 255, 0.152);
-  box-shadow: 0px 0px 6px 4px rgba(255, 255, 255, 0.152);
-  -moz-animation: bubble-positions 13s linear infinite -4s;
-  -webkit-animation: bubble-positions 13s linear infinite -4s;
-  animation: bubble-positions 13s linear infinite -4s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(32) {
-  height: 19px;
-  width: 19px;
-  left: 31%;
-  opacity: 0.197;
-  -moz-box-shadow: 0px 0px 1px 3px rgba(255, 255, 255, 0.197);
-  -webkit-box-shadow: 0px 0px 1px 3px rgba(255, 255, 255, 0.197);
-  box-shadow: 0px 0px 1px 3px rgba(255, 255, 255, 0.197);
-  -moz-animation: bubble-positions 7s linear infinite -8s;
-  -webkit-animation: bubble-positions 7s linear infinite -8s;
-  animation: bubble-positions 7s linear infinite -8s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(33) {
-  height: 21px;
-  width: 21px;
-  left: 28%;
-  opacity: 0.173;
-  -moz-box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.173);
-  -webkit-box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.173);
-  box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.173);
-  -moz-animation: bubble-positions 10s linear infinite -8s;
-  -webkit-animation: bubble-positions 10s linear infinite -8s;
-  animation: bubble-positions 10s linear infinite -8s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(34) {
-  height: 17px;
-  width: 17px;
-  left: 30%;
-  opacity: 0.156;
-  -moz-box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.156);
-  -webkit-box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.156);
-  box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.156);
-  -moz-animation: bubble-positions 11s linear infinite -1s;
-  -webkit-animation: bubble-positions 11s linear infinite -1s;
-  animation: bubble-positions 11s linear infinite -1s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(35) {
-  height: 17px;
-  width: 17px;
-  left: 71%;
-  opacity: 0.194;
-  -moz-box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.194);
-  -webkit-box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.194);
-  box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.194);
-  -moz-animation: bubble-positions 14s linear infinite -9s;
-  -webkit-animation: bubble-positions 14s linear infinite -9s;
-  animation: bubble-positions 14s linear infinite -9s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(36) {
-  height: 19px;
-  width: 19px;
-  left: 42%;
-  opacity: 0.119;
-  -moz-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.119);
-  -webkit-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.119);
-  box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.119);
-  -moz-animation: bubble-positions 9s linear infinite -5s;
-  -webkit-animation: bubble-positions 9s linear infinite -5s;
-  animation: bubble-positions 9s linear infinite -5s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(37) {
-  height: 21px;
-  width: 21px;
-  left: 86%;
-  opacity: 0.106;
-  -moz-box-shadow: 0px 0px 7px 1px rgba(255, 255, 255, 0.106);
-  -webkit-box-shadow: 0px 0px 7px 1px rgba(255, 255, 255, 0.106);
-  box-shadow: 0px 0px 7px 1px rgba(255, 255, 255, 0.106);
-  -moz-animation: bubble-positions 14s linear infinite -3s;
-  -webkit-animation: bubble-positions 14s linear infinite -3s;
-  animation: bubble-positions 14s linear infinite -3s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(38) {
-  height: 23px;
-  width: 23px;
-  left: 3%;
-  opacity: 0.181;
-  -moz-box-shadow: 0px 0px 7px 4px rgba(255, 255, 255, 0.181);
-  -webkit-box-shadow: 0px 0px 7px 4px rgba(255, 255, 255, 0.181);
-  box-shadow: 0px 0px 7px 4px rgba(255, 255, 255, 0.181);
-  -moz-animation: bubble-positions 13s linear infinite -2s;
-  -webkit-animation: bubble-positions 13s linear infinite -2s;
-  animation: bubble-positions 13s linear infinite -2s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(39) {
-  height: 21px;
-  width: 21px;
-  left: 70%;
-  opacity: 0.144;
-  -moz-box-shadow: 0px 0px 3px 4px rgba(255, 255, 255, 0.144);
-  -webkit-box-shadow: 0px 0px 3px 4px rgba(255, 255, 255, 0.144);
-  box-shadow: 0px 0px 3px 4px rgba(255, 255, 255, 0.144);
-  -moz-animation: bubble-positions 9s linear infinite -8s;
-  -webkit-animation: bubble-positions 9s linear infinite -8s;
-  animation: bubble-positions 9s linear infinite -8s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(40) {
-  height: 23px;
-  width: 23px;
-  left: 16%;
-  opacity: 0.119;
-  -moz-box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.119);
-  -webkit-box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.119);
-  box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.119);
-  -moz-animation: bubble-positions 12s linear infinite -8s;
-  -webkit-animation: bubble-positions 12s linear infinite -8s;
-  animation: bubble-positions 12s linear infinite -8s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(41) {
-  height: 22px;
-  width: 22px;
-  left: 12%;
-  opacity: 0.158;
-  -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.158);
-  -webkit-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.158);
-  box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.158);
-  -moz-animation: bubble-positions 7s linear infinite -6s;
-  -webkit-animation: bubble-positions 7s linear infinite -6s;
-  animation: bubble-positions 7s linear infinite -6s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(42) {
-  height: 23px;
-  width: 23px;
-  left: 80%;
-  opacity: 0.14;
-  -moz-box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.14);
-  -webkit-box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.14);
-  box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.14);
-  -moz-animation: bubble-positions 14s linear infinite -1s;
-  -webkit-animation: bubble-positions 14s linear infinite -1s;
-  animation: bubble-positions 14s linear infinite -1s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(43) {
-  height: 20px;
-  width: 20px;
-  left: 75%;
-  opacity: 0.113;
-  -moz-box-shadow: 0px 0px 1px 4px rgba(255, 255, 255, 0.113);
-  -webkit-box-shadow: 0px 0px 1px 4px rgba(255, 255, 255, 0.113);
-  box-shadow: 0px 0px 1px 4px rgba(255, 255, 255, 0.113);
-  -moz-animation: bubble-positions 13s linear infinite -5s;
-  -webkit-animation: bubble-positions 13s linear infinite -5s;
-  animation: bubble-positions 13s linear infinite -5s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(44) {
-  height: 24px;
-  width: 24px;
-  left: 77%;
-  opacity: 0.131;
-  -moz-box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.131);
-  -webkit-box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.131);
-  box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.131);
-  -moz-animation: bubble-positions 12s linear infinite -3s;
-  -webkit-animation: bubble-positions 12s linear infinite -3s;
-  animation: bubble-positions 12s linear infinite -3s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(45) {
-  height: 17px;
-  width: 17px;
-  left: 58%;
-  opacity: 0.157;
-  -moz-box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.157);
-  -webkit-box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.157);
-  box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.157);
-  -moz-animation: bubble-positions 12s linear infinite -1s;
-  -webkit-animation: bubble-positions 12s linear infinite -1s;
-  animation: bubble-positions 12s linear infinite -1s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(46) {
-  height: 17px;
-  width: 17px;
-  left: 40%;
-  opacity: 0.17;
-  -moz-box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.17);
-  -webkit-box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.17);
-  box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.17);
-  -moz-animation: bubble-positions 10s linear infinite -7s;
-  -webkit-animation: bubble-positions 10s linear infinite -7s;
-  animation: bubble-positions 10s linear infinite -7s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(47) {
-  height: 21px;
-  width: 21px;
-  left: 5%;
-  opacity: 0.171;
-  -moz-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.171);
-  -webkit-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.171);
-  box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.171);
-  -moz-animation: bubble-positions 10s linear infinite -5s;
-  -webkit-animation: bubble-positions 10s linear infinite -5s;
-  animation: bubble-positions 10s linear infinite -5s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(48) {
-  height: 18px;
-  width: 18px;
-  left: 40%;
-  opacity: 0.162;
-  -moz-box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.162);
-  -webkit-box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.162);
-  box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.162);
-  -moz-animation: bubble-positions 13s linear infinite -5s;
-  -webkit-animation: bubble-positions 13s linear infinite -5s;
-  animation: bubble-positions 13s linear infinite -5s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(49) {
-  height: 18px;
-  width: 18px;
-  left: 59%;
-  opacity: 0.139;
-  -moz-box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.139);
-  -webkit-box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.139);
-  box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.139);
-  -moz-animation: bubble-positions 12s linear infinite -9s;
-  -webkit-animation: bubble-positions 12s linear infinite -9s;
-  animation: bubble-positions 12s linear infinite -9s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(50) {
-  height: 18px;
-  width: 18px;
-  left: 38%;
-  opacity: 0.131;
-  -moz-box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.131);
-  -webkit-box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.131);
-  box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.131);
-  -moz-animation: bubble-positions 7s linear infinite -6s;
-  -webkit-animation: bubble-positions 7s linear infinite -6s;
-  animation: bubble-positions 7s linear infinite -6s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(51) {
-  height: 18px;
-  width: 18px;
-  left: 75%;
-  opacity: 0.155;
-  -moz-box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.155);
-  -webkit-box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.155);
-  box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.155);
-  -moz-animation: bubble-positions 8s linear infinite -5s;
-  -webkit-animation: bubble-positions 8s linear infinite -5s;
-  animation: bubble-positions 8s linear infinite -5s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(52) {
-  height: 18px;
-  width: 18px;
-  left: 2%;
-  opacity: 0.196;
-  -moz-box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.196);
-  -webkit-box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.196);
-  box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.196);
-  -moz-animation: bubble-positions 8s linear infinite -4s;
-  -webkit-animation: bubble-positions 8s linear infinite -4s;
-  animation: bubble-positions 8s linear infinite -4s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(53) {
-  height: 22px;
-  width: 22px;
-  left: 69%;
-  opacity: 0.132;
-  -moz-box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.132);
-  -webkit-box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.132);
-  box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.132);
-  -moz-animation: bubble-positions 9s linear infinite -7s;
-  -webkit-animation: bubble-positions 9s linear infinite -7s;
-  animation: bubble-positions 9s linear infinite -7s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(54) {
-  height: 19px;
-  width: 19px;
-  left: 70%;
-  opacity: 0.116;
-  -moz-box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.116);
-  -webkit-box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.116);
-  box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.116);
-  -moz-animation: bubble-positions 9s linear infinite -2s;
-  -webkit-animation: bubble-positions 9s linear infinite -2s;
-  animation: bubble-positions 9s linear infinite -2s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(55) {
-  height: 21px;
-  width: 21px;
-  left: 4%;
-  opacity: 0.145;
-  -moz-box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.145);
-  -webkit-box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.145);
-  box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.145);
-  -moz-animation: bubble-positions 10s linear infinite -9s;
-  -webkit-animation: bubble-positions 10s linear infinite -9s;
-  animation: bubble-positions 10s linear infinite -9s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(56) {
-  height: 19px;
-  width: 19px;
-  left: 74%;
-  opacity: 0.158;
-  -moz-box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.158);
-  -webkit-box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.158);
-  box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.158);
-  -moz-animation: bubble-positions 13s linear infinite -9s;
-  -webkit-animation: bubble-positions 13s linear infinite -9s;
-  animation: bubble-positions 13s linear infinite -9s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(57) {
-  height: 20px;
-  width: 20px;
-  left: 2%;
-  opacity: 0.186;
-  -moz-box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.186);
-  -webkit-box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.186);
-  box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.186);
-  -moz-animation: bubble-positions 7s linear infinite -5s;
-  -webkit-animation: bubble-positions 7s linear infinite -5s;
-  animation: bubble-positions 7s linear infinite -5s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(58) {
-  height: 22px;
-  width: 22px;
-  left: 80%;
-  opacity: 0.136;
-  -moz-box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.136);
-  -webkit-box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.136);
-  box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.136);
-  -moz-animation: bubble-positions 10s linear infinite -3s;
-  -webkit-animation: bubble-positions 10s linear infinite -3s;
-  animation: bubble-positions 10s linear infinite -3s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(59) {
-  height: 21px;
-  width: 21px;
-  left: 85%;
-  opacity: 0.135;
-  -moz-box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.135);
-  -webkit-box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.135);
-  box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.135);
-  -moz-animation: bubble-positions 9s linear infinite -2s;
-  -webkit-animation: bubble-positions 9s linear infinite -2s;
-  animation: bubble-positions 9s linear infinite -2s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(60) {
-  height: 23px;
-  width: 23px;
-  left: 69%;
-  opacity: 0.19;
-  -moz-box-shadow: 0px 0px 6px 4px rgba(255, 255, 255, 0.19);
-  -webkit-box-shadow: 0px 0px 6px 4px rgba(255, 255, 255, 0.19);
-  box-shadow: 0px 0px 6px 4px rgba(255, 255, 255, 0.19);
-  -moz-animation: bubble-positions 11s linear infinite -5s;
-  -webkit-animation: bubble-positions 11s linear infinite -5s;
-  animation: bubble-positions 11s linear infinite -5s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(61) {
-  height: 21px;
-  width: 21px;
-  left: 15%;
-  opacity: 0.16;
-  -moz-box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.16);
-  -webkit-box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.16);
-  box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.16);
-  -moz-animation: bubble-positions 8s linear infinite -2s;
-  -webkit-animation: bubble-positions 8s linear infinite -2s;
-  animation: bubble-positions 8s linear infinite -2s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(62) {
-  height: 20px;
-  width: 20px;
-  left: 49%;
-  opacity: 0.143;
-  -moz-box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.143);
-  -webkit-box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.143);
-  box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.143);
-  -moz-animation: bubble-positions 10s linear infinite -2s;
-  -webkit-animation: bubble-positions 10s linear infinite -2s;
-  animation: bubble-positions 10s linear infinite -2s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(63) {
-  height: 22px;
-  width: 22px;
-  left: 63%;
-  opacity: 0.2;
-  -moz-box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.2);
-  -webkit-box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.2);
-  -moz-animation: bubble-positions 10s linear infinite -6s;
-  -webkit-animation: bubble-positions 10s linear infinite -6s;
-  animation: bubble-positions 10s linear infinite -6s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(64) {
-  height: 17px;
-  width: 17px;
-  left: 80%;
-  opacity: 0.102;
-  -moz-box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.102);
-  -webkit-box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.102);
-  box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.102);
-  -moz-animation: bubble-positions 12s linear infinite -7s;
-  -webkit-animation: bubble-positions 12s linear infinite -7s;
-  animation: bubble-positions 12s linear infinite -7s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(65) {
-  height: 24px;
-  width: 24px;
-  left: 48%;
-  opacity: 0.116;
-  -moz-box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.116);
-  -webkit-box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.116);
-  box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.116);
+  left: 83%;
+  opacity: 0.115;
+  -moz-box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.115);
+  -webkit-box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.115);
+  box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.115);
   -moz-animation: bubble-positions 13s linear infinite -1s;
   -webkit-animation: bubble-positions 13s linear infinite -1s;
   animation: bubble-positions 13s linear infinite -1s;
 }
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(66) {
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(2) {
   height: 21px;
   width: 21px;
-  left: 65%;
-  opacity: 0.168;
-  -moz-box-shadow: 0px 0px 1px 2px rgba(255, 255, 255, 0.168);
-  -webkit-box-shadow: 0px 0px 1px 2px rgba(255, 255, 255, 0.168);
-  box-shadow: 0px 0px 1px 2px rgba(255, 255, 255, 0.168);
-  -moz-animation: bubble-positions 13s linear infinite -9s;
-  -webkit-animation: bubble-positions 13s linear infinite -9s;
-  animation: bubble-positions 13s linear infinite -9s;
+  left: 12%;
+  opacity: 0.16;
+  -moz-box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.16);
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.16);
+  box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.16);
+  -moz-animation: bubble-positions 8s linear infinite -2s;
+  -webkit-animation: bubble-positions 8s linear infinite -2s;
+  animation: bubble-positions 8s linear infinite -2s;
 }
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(67) {
-  height: 18px;
-  width: 18px;
-  left: 48%;
-  opacity: 0.118;
-  -moz-box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.118);
-  -webkit-box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.118);
-  box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.118);
-  -moz-animation: bubble-positions 14s linear infinite -10s;
-  -webkit-animation: bubble-positions 14s linear infinite -10s;
-  animation: bubble-positions 14s linear infinite -10s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(68) {
-  height: 18px;
-  width: 18px;
-  left: 27%;
-  opacity: 0.116;
-  -moz-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.116);
-  -webkit-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.116);
-  box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.116);
-  -moz-animation: bubble-positions 9s linear infinite -5s;
-  -webkit-animation: bubble-positions 9s linear infinite -5s;
-  animation: bubble-positions 9s linear infinite -5s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(69) {
-  height: 19px;
-  width: 19px;
-  left: 86%;
-  opacity: 0.112;
-  -moz-box-shadow: 0px 0px 7px 1px rgba(255, 255, 255, 0.112);
-  -webkit-box-shadow: 0px 0px 7px 1px rgba(255, 255, 255, 0.112);
-  box-shadow: 0px 0px 7px 1px rgba(255, 255, 255, 0.112);
-  -moz-animation: bubble-positions 10s linear infinite -4s;
-  -webkit-animation: bubble-positions 10s linear infinite -4s;
-  animation: bubble-positions 10s linear infinite -4s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(70) {
-  height: 22px;
-  width: 22px;
-  left: 2%;
-  opacity: 0.141;
-  -moz-box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.141);
-  -webkit-box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.141);
-  box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.141);
-  -moz-animation: bubble-positions 8s linear infinite -1s;
-  -webkit-animation: bubble-positions 8s linear infinite -1s;
-  animation: bubble-positions 8s linear infinite -1s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(71) {
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(3) {
   height: 17px;
   width: 17px;
-  left: 31%;
-  opacity: 0.171;
-  -moz-box-shadow: 0px 0px 4px 2px rgba(255, 255, 255, 0.171);
-  -webkit-box-shadow: 0px 0px 4px 2px rgba(255, 255, 255, 0.171);
-  box-shadow: 0px 0px 4px 2px rgba(255, 255, 255, 0.171);
+  left: 58%;
+  opacity: 0.114;
+  -moz-box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.114);
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.114);
+  box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.114);
+  -moz-animation: bubble-positions 8s linear infinite -8s;
+  -webkit-animation: bubble-positions 8s linear infinite -8s;
+  animation: bubble-positions 8s linear infinite -8s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(4) {
+  height: 23px;
+  width: 23px;
+  left: 27%;
+  opacity: 0.114;
+  -moz-box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.114);
+  -webkit-box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.114);
+  box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.114);
+  -moz-animation: bubble-positions 11s linear infinite -8s;
+  -webkit-animation: bubble-positions 11s linear infinite -8s;
+  animation: bubble-positions 11s linear infinite -8s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(5) {
+  height: 21px;
+  width: 21px;
+  left: 47%;
+  opacity: 0.125;
+  -moz-box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.125);
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.125);
+  box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.125);
+  -moz-animation: bubble-positions 12s linear infinite -2s;
+  -webkit-animation: bubble-positions 12s linear infinite -2s;
+  animation: bubble-positions 12s linear infinite -2s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(6) {
+  height: 20px;
+  width: 20px;
+  left: 15%;
+  opacity: 0.158;
+  -moz-box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.158);
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.158);
+  box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.158);
+  -moz-animation: bubble-positions 11s linear infinite -7s;
+  -webkit-animation: bubble-positions 11s linear infinite -7s;
+  animation: bubble-positions 11s linear infinite -7s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(7) {
+  height: 23px;
+  width: 23px;
+  left: 53%;
+  opacity: 0.183;
+  -moz-box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.183);
+  -webkit-box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.183);
+  box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.183);
   -moz-animation: bubble-positions 11s linear infinite -5s;
   -webkit-animation: bubble-positions 11s linear infinite -5s;
   animation: bubble-positions 11s linear infinite -5s;
 }
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(72) {
-  height: 21px;
-  width: 21px;
-  left: 83%;
-  opacity: 0.176;
-  -moz-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.176);
-  -webkit-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.176);
-  box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.176);
-  -moz-animation: bubble-positions 12s linear infinite -4s;
-  -webkit-animation: bubble-positions 12s linear infinite -4s;
-  animation: bubble-positions 12s linear infinite -4s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(73) {
-  height: 24px;
-  width: 24px;
-  left: 39%;
-  opacity: 0.125;
-  -moz-box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.125);
-  -webkit-box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.125);
-  box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.125);
-  -moz-animation: bubble-positions 14s linear infinite -7s;
-  -webkit-animation: bubble-positions 14s linear infinite -7s;
-  animation: bubble-positions 14s linear infinite -7s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(74) {
-  height: 24px;
-  width: 24px;
-  left: 61%;
-  opacity: 0.187;
-  -moz-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.187);
-  -webkit-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.187);
-  box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.187);
-  -moz-animation: bubble-positions 11s linear infinite -10s;
-  -webkit-animation: bubble-positions 11s linear infinite -10s;
-  animation: bubble-positions 11s linear infinite -10s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(75) {
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(8) {
   height: 23px;
   width: 23px;
-  left: 44%;
-  opacity: 0.114;
-  -moz-box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.114);
-  -webkit-box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.114);
-  box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.114);
-  -moz-animation: bubble-positions 7s linear infinite -1s;
-  -webkit-animation: bubble-positions 7s linear infinite -1s;
-  animation: bubble-positions 7s linear infinite -1s;
+  left: 13%;
+  opacity: 0.178;
+  -moz-box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.178);
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.178);
+  box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.178);
+  -moz-animation: bubble-positions 8s linear infinite -5s;
+  -webkit-animation: bubble-positions 8s linear infinite -5s;
+  animation: bubble-positions 8s linear infinite -5s;
 }
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(76) {
-  height: 23px;
-  width: 23px;
-  left: 58%;
-  opacity: 0.197;
-  -moz-box-shadow: 0px 0px 7px 3px rgba(255, 255, 255, 0.197);
-  -webkit-box-shadow: 0px 0px 7px 3px rgba(255, 255, 255, 0.197);
-  box-shadow: 0px 0px 7px 3px rgba(255, 255, 255, 0.197);
-  -moz-animation: bubble-positions 12s linear infinite -8s;
-  -webkit-animation: bubble-positions 12s linear infinite -8s;
-  animation: bubble-positions 12s linear infinite -8s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(77) {
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(9) {
   height: 19px;
   width: 19px;
-  left: 80%;
-  opacity: 0.162;
-  -moz-box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.162);
-  -webkit-box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.162);
-  box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.162);
-  -moz-animation: bubble-positions 9s linear infinite -6s;
-  -webkit-animation: bubble-positions 9s linear infinite -6s;
-  animation: bubble-positions 9s linear infinite -6s;
-}
-/* line 53, ../sass/style.scss */
-.bg .bubble:nth-child(78) {
-  height: 21px;
-  width: 21px;
-  left: 93%;
-  opacity: 0.189;
-  -moz-box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.189);
-  -webkit-box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.189);
-  box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.189);
+  left: 65%;
+  opacity: 0.112;
+  -moz-box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.112);
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.112);
+  box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.112);
   -moz-animation: bubble-positions 9s linear infinite -1s;
   -webkit-animation: bubble-positions 9s linear infinite -1s;
   animation: bubble-positions 9s linear infinite -1s;
 }
-/* line 53, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(10) {
+  height: 19px;
+  width: 19px;
+  left: 46%;
+  opacity: 0.12;
+  -moz-box-shadow: 0px 0px 1px 2px rgba(255, 255, 255, 0.12);
+  -webkit-box-shadow: 0px 0px 1px 2px rgba(255, 255, 255, 0.12);
+  box-shadow: 0px 0px 1px 2px rgba(255, 255, 255, 0.12);
+  -moz-animation: bubble-positions 8s linear infinite -4s;
+  -webkit-animation: bubble-positions 8s linear infinite -4s;
+  animation: bubble-positions 8s linear infinite -4s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(11) {
+  height: 19px;
+  width: 19px;
+  left: 12%;
+  opacity: 0.111;
+  -moz-box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.111);
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.111);
+  box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.111);
+  -moz-animation: bubble-positions 14s linear infinite -6s;
+  -webkit-animation: bubble-positions 14s linear infinite -6s;
+  animation: bubble-positions 14s linear infinite -6s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(12) {
+  height: 19px;
+  width: 19px;
+  left: 58%;
+  opacity: 0.13;
+  -moz-box-shadow: 0px 0px 7px 4px rgba(255, 255, 255, 0.13);
+  -webkit-box-shadow: 0px 0px 7px 4px rgba(255, 255, 255, 0.13);
+  box-shadow: 0px 0px 7px 4px rgba(255, 255, 255, 0.13);
+  -moz-animation: bubble-positions 8s linear infinite -4s;
+  -webkit-animation: bubble-positions 8s linear infinite -4s;
+  animation: bubble-positions 8s linear infinite -4s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(13) {
+  height: 19px;
+  width: 19px;
+  left: 43%;
+  opacity: 0.198;
+  -moz-box-shadow: 0px 0px 1px 4px rgba(255, 255, 255, 0.198);
+  -webkit-box-shadow: 0px 0px 1px 4px rgba(255, 255, 255, 0.198);
+  box-shadow: 0px 0px 1px 4px rgba(255, 255, 255, 0.198);
+  -moz-animation: bubble-positions 10s linear infinite -10s;
+  -webkit-animation: bubble-positions 10s linear infinite -10s;
+  animation: bubble-positions 10s linear infinite -10s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(14) {
+  height: 21px;
+  width: 21px;
+  left: 25%;
+  opacity: 0.153;
+  -moz-box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.153);
+  -webkit-box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.153);
+  box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.153);
+  -moz-animation: bubble-positions 13s linear infinite -9s;
+  -webkit-animation: bubble-positions 13s linear infinite -9s;
+  animation: bubble-positions 13s linear infinite -9s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(15) {
+  height: 17px;
+  width: 17px;
+  left: 27%;
+  opacity: 0.143;
+  -moz-box-shadow: 0px 0px 1px 3px rgba(255, 255, 255, 0.143);
+  -webkit-box-shadow: 0px 0px 1px 3px rgba(255, 255, 255, 0.143);
+  box-shadow: 0px 0px 1px 3px rgba(255, 255, 255, 0.143);
+  -moz-animation: bubble-positions 11s linear infinite -8s;
+  -webkit-animation: bubble-positions 11s linear infinite -8s;
+  animation: bubble-positions 11s linear infinite -8s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(16) {
+  height: 17px;
+  width: 17px;
+  left: 85%;
+  opacity: 0.116;
+  -moz-box-shadow: 0px 0px 6px 4px rgba(255, 255, 255, 0.116);
+  -webkit-box-shadow: 0px 0px 6px 4px rgba(255, 255, 255, 0.116);
+  box-shadow: 0px 0px 6px 4px rgba(255, 255, 255, 0.116);
+  -moz-animation: bubble-positions 12s linear infinite -6s;
+  -webkit-animation: bubble-positions 12s linear infinite -6s;
+  animation: bubble-positions 12s linear infinite -6s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(17) {
+  height: 20px;
+  width: 20px;
+  left: 23%;
+  opacity: 0.114;
+  -moz-box-shadow: 0px 0px 1px 2px rgba(255, 255, 255, 0.114);
+  -webkit-box-shadow: 0px 0px 1px 2px rgba(255, 255, 255, 0.114);
+  box-shadow: 0px 0px 1px 2px rgba(255, 255, 255, 0.114);
+  -moz-animation: bubble-positions 14s linear infinite -7s;
+  -webkit-animation: bubble-positions 14s linear infinite -7s;
+  animation: bubble-positions 14s linear infinite -7s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(18) {
+  height: 21px;
+  width: 21px;
+  left: 25%;
+  opacity: 0.136;
+  -moz-box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.136);
+  -webkit-box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.136);
+  box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.136);
+  -moz-animation: bubble-positions 13s linear infinite -8s;
+  -webkit-animation: bubble-positions 13s linear infinite -8s;
+  animation: bubble-positions 13s linear infinite -8s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(19) {
+  height: 17px;
+  width: 17px;
+  left: 97%;
+  opacity: 0.133;
+  -moz-box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.133);
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.133);
+  box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.133);
+  -moz-animation: bubble-positions 12s linear infinite -2s;
+  -webkit-animation: bubble-positions 12s linear infinite -2s;
+  animation: bubble-positions 12s linear infinite -2s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(20) {
+  height: 19px;
+  width: 19px;
+  left: 69%;
+  opacity: 0.159;
+  -moz-box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.159);
+  -webkit-box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.159);
+  box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.159);
+  -moz-animation: bubble-positions 11s linear infinite -6s;
+  -webkit-animation: bubble-positions 11s linear infinite -6s;
+  animation: bubble-positions 11s linear infinite -6s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(21) {
+  height: 24px;
+  width: 24px;
+  left: 12%;
+  opacity: 0.179;
+  -moz-box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.179);
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.179);
+  box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.179);
+  -moz-animation: bubble-positions 14s linear infinite -5s;
+  -webkit-animation: bubble-positions 14s linear infinite -5s;
+  animation: bubble-positions 14s linear infinite -5s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(22) {
+  height: 23px;
+  width: 23px;
+  left: 98%;
+  opacity: 0.184;
+  -moz-box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.184);
+  -webkit-box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.184);
+  box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.184);
+  -moz-animation: bubble-positions 11s linear infinite -4s;
+  -webkit-animation: bubble-positions 11s linear infinite -4s;
+  animation: bubble-positions 11s linear infinite -4s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(23) {
+  height: 20px;
+  width: 20px;
+  left: 2%;
+  opacity: 0.127;
+  -moz-box-shadow: 0px 0px 1px 4px rgba(255, 255, 255, 0.127);
+  -webkit-box-shadow: 0px 0px 1px 4px rgba(255, 255, 255, 0.127);
+  box-shadow: 0px 0px 1px 4px rgba(255, 255, 255, 0.127);
+  -moz-animation: bubble-positions 13s linear infinite -6s;
+  -webkit-animation: bubble-positions 13s linear infinite -6s;
+  animation: bubble-positions 13s linear infinite -6s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(24) {
+  height: 24px;
+  width: 24px;
+  left: 82%;
+  opacity: 0.148;
+  -moz-box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.148);
+  -webkit-box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.148);
+  box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.148);
+  -moz-animation: bubble-positions 8s linear infinite -6s;
+  -webkit-animation: bubble-positions 8s linear infinite -6s;
+  animation: bubble-positions 8s linear infinite -6s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(25) {
+  height: 24px;
+  width: 24px;
+  left: 53%;
+  opacity: 0.182;
+  -moz-box-shadow: 0px 0px 4px 2px rgba(255, 255, 255, 0.182);
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(255, 255, 255, 0.182);
+  box-shadow: 0px 0px 4px 2px rgba(255, 255, 255, 0.182);
+  -moz-animation: bubble-positions 9s linear infinite -10s;
+  -webkit-animation: bubble-positions 9s linear infinite -10s;
+  animation: bubble-positions 9s linear infinite -10s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(26) {
+  height: 17px;
+  width: 17px;
+  left: 33%;
+  opacity: 0.148;
+  -moz-box-shadow: 0px 0px 2px 4px rgba(255, 255, 255, 0.148);
+  -webkit-box-shadow: 0px 0px 2px 4px rgba(255, 255, 255, 0.148);
+  box-shadow: 0px 0px 2px 4px rgba(255, 255, 255, 0.148);
+  -moz-animation: bubble-positions 13s linear infinite -3s;
+  -webkit-animation: bubble-positions 13s linear infinite -3s;
+  animation: bubble-positions 13s linear infinite -3s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(27) {
+  height: 18px;
+  width: 18px;
+  left: 48%;
+  opacity: 0.193;
+  -moz-box-shadow: 0px 0px 2px 4px rgba(255, 255, 255, 0.193);
+  -webkit-box-shadow: 0px 0px 2px 4px rgba(255, 255, 255, 0.193);
+  box-shadow: 0px 0px 2px 4px rgba(255, 255, 255, 0.193);
+  -moz-animation: bubble-positions 14s linear infinite -5s;
+  -webkit-animation: bubble-positions 14s linear infinite -5s;
+  animation: bubble-positions 14s linear infinite -5s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(28) {
+  height: 24px;
+  width: 24px;
+  left: 84%;
+  opacity: 0.141;
+  -moz-box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.141);
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.141);
+  box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.141);
+  -moz-animation: bubble-positions 11s linear infinite -2s;
+  -webkit-animation: bubble-positions 11s linear infinite -2s;
+  animation: bubble-positions 11s linear infinite -2s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(29) {
+  height: 19px;
+  width: 19px;
+  left: 8%;
+  opacity: 0.102;
+  -moz-box-shadow: 0px 0px 3px 4px rgba(255, 255, 255, 0.102);
+  -webkit-box-shadow: 0px 0px 3px 4px rgba(255, 255, 255, 0.102);
+  box-shadow: 0px 0px 3px 4px rgba(255, 255, 255, 0.102);
+  -moz-animation: bubble-positions 12s linear infinite -1s;
+  -webkit-animation: bubble-positions 12s linear infinite -1s;
+  animation: bubble-positions 12s linear infinite -1s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(30) {
+  height: 19px;
+  width: 19px;
+  left: 44%;
+  opacity: 0.159;
+  -moz-box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.159);
+  -webkit-box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.159);
+  box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.159);
+  -moz-animation: bubble-positions 12s linear infinite -8s;
+  -webkit-animation: bubble-positions 12s linear infinite -8s;
+  animation: bubble-positions 12s linear infinite -8s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(31) {
+  height: 20px;
+  width: 20px;
+  left: 2%;
+  opacity: 0.193;
+  -moz-box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.193);
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.193);
+  box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.193);
+  -moz-animation: bubble-positions 14s linear infinite -8s;
+  -webkit-animation: bubble-positions 14s linear infinite -8s;
+  animation: bubble-positions 14s linear infinite -8s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(32) {
+  height: 19px;
+  width: 19px;
+  left: 86%;
+  opacity: 0.194;
+  -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.194);
+  -webkit-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.194);
+  box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.194);
+  -moz-animation: bubble-positions 7s linear infinite -10s;
+  -webkit-animation: bubble-positions 7s linear infinite -10s;
+  animation: bubble-positions 7s linear infinite -10s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(33) {
+  height: 21px;
+  width: 21px;
+  left: 72%;
+  opacity: 0.191;
+  -moz-box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.191);
+  -webkit-box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.191);
+  box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.191);
+  -moz-animation: bubble-positions 11s linear infinite -8s;
+  -webkit-animation: bubble-positions 11s linear infinite -8s;
+  animation: bubble-positions 11s linear infinite -8s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(34) {
+  height: 19px;
+  width: 19px;
+  left: 97%;
+  opacity: 0.154;
+  -moz-box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.154);
+  -webkit-box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.154);
+  box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.154);
+  -moz-animation: bubble-positions 7s linear infinite -2s;
+  -webkit-animation: bubble-positions 7s linear infinite -2s;
+  animation: bubble-positions 7s linear infinite -2s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(35) {
+  height: 22px;
+  width: 22px;
+  left: 30%;
+  opacity: 0.149;
+  -moz-box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.149);
+  -webkit-box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.149);
+  box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.149);
+  -moz-animation: bubble-positions 11s linear infinite -9s;
+  -webkit-animation: bubble-positions 11s linear infinite -9s;
+  animation: bubble-positions 11s linear infinite -9s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(36) {
+  height: 17px;
+  width: 17px;
+  left: 58%;
+  opacity: 0.128;
+  -moz-box-shadow: 0px 0px 7px 4px rgba(255, 255, 255, 0.128);
+  -webkit-box-shadow: 0px 0px 7px 4px rgba(255, 255, 255, 0.128);
+  box-shadow: 0px 0px 7px 4px rgba(255, 255, 255, 0.128);
+  -moz-animation: bubble-positions 12s linear infinite -7s;
+  -webkit-animation: bubble-positions 12s linear infinite -7s;
+  animation: bubble-positions 12s linear infinite -7s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(37) {
+  height: 22px;
+  width: 22px;
+  left: 10%;
+  opacity: 0.157;
+  -moz-box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.157);
+  -webkit-box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.157);
+  box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.157);
+  -moz-animation: bubble-positions 8s linear infinite -6s;
+  -webkit-animation: bubble-positions 8s linear infinite -6s;
+  animation: bubble-positions 8s linear infinite -6s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(38) {
+  height: 19px;
+  width: 19px;
+  left: 96%;
+  opacity: 0.162;
+  -moz-box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.162);
+  -webkit-box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.162);
+  box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.162);
+  -moz-animation: bubble-positions 7s linear infinite -10s;
+  -webkit-animation: bubble-positions 7s linear infinite -10s;
+  animation: bubble-positions 7s linear infinite -10s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(39) {
+  height: 20px;
+  width: 20px;
+  left: 53%;
+  opacity: 0.196;
+  -moz-box-shadow: 0px 0px 1px 3px rgba(255, 255, 255, 0.196);
+  -webkit-box-shadow: 0px 0px 1px 3px rgba(255, 255, 255, 0.196);
+  box-shadow: 0px 0px 1px 3px rgba(255, 255, 255, 0.196);
+  -moz-animation: bubble-positions 7s linear infinite -5s;
+  -webkit-animation: bubble-positions 7s linear infinite -5s;
+  animation: bubble-positions 7s linear infinite -5s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(40) {
+  height: 22px;
+  width: 22px;
+  left: 94%;
+  opacity: 0.192;
+  -moz-box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.192);
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.192);
+  box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.192);
+  -moz-animation: bubble-positions 9s linear infinite -6s;
+  -webkit-animation: bubble-positions 9s linear infinite -6s;
+  animation: bubble-positions 9s linear infinite -6s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(41) {
+  height: 17px;
+  width: 17px;
+  left: 99%;
+  opacity: 0.102;
+  -moz-box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.102);
+  -webkit-box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.102);
+  box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.102);
+  -moz-animation: bubble-positions 12s linear infinite -3s;
+  -webkit-animation: bubble-positions 12s linear infinite -3s;
+  animation: bubble-positions 12s linear infinite -3s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(42) {
+  height: 19px;
+  width: 19px;
+  left: 34%;
+  opacity: 0.135;
+  -moz-box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.135);
+  -webkit-box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.135);
+  box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.135);
+  -moz-animation: bubble-positions 14s linear infinite -1s;
+  -webkit-animation: bubble-positions 14s linear infinite -1s;
+  animation: bubble-positions 14s linear infinite -1s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(43) {
+  height: 17px;
+  width: 17px;
+  left: 68%;
+  opacity: 0.142;
+  -moz-box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.142);
+  -webkit-box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.142);
+  box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.142);
+  -moz-animation: bubble-positions 12s linear infinite -6s;
+  -webkit-animation: bubble-positions 12s linear infinite -6s;
+  animation: bubble-positions 12s linear infinite -6s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(44) {
+  height: 18px;
+  width: 18px;
+  left: 79%;
+  opacity: 0.149;
+  -moz-box-shadow: 0px 0px 6px 4px rgba(255, 255, 255, 0.149);
+  -webkit-box-shadow: 0px 0px 6px 4px rgba(255, 255, 255, 0.149);
+  box-shadow: 0px 0px 6px 4px rgba(255, 255, 255, 0.149);
+  -moz-animation: bubble-positions 7s linear infinite -6s;
+  -webkit-animation: bubble-positions 7s linear infinite -6s;
+  animation: bubble-positions 7s linear infinite -6s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(45) {
+  height: 21px;
+  width: 21px;
+  left: 17%;
+  opacity: 0.111;
+  -moz-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.111);
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.111);
+  box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.111);
+  -moz-animation: bubble-positions 8s linear infinite -6s;
+  -webkit-animation: bubble-positions 8s linear infinite -6s;
+  animation: bubble-positions 8s linear infinite -6s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(46) {
+  height: 24px;
+  width: 24px;
+  left: 85%;
+  opacity: 0.2;
+  -moz-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.2);
+  -moz-animation: bubble-positions 8s linear infinite -1s;
+  -webkit-animation: bubble-positions 8s linear infinite -1s;
+  animation: bubble-positions 8s linear infinite -1s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(47) {
+  height: 22px;
+  width: 22px;
+  left: 43%;
+  opacity: 0.163;
+  -moz-box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.163);
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.163);
+  box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.163);
+  -moz-animation: bubble-positions 14s linear infinite -8s;
+  -webkit-animation: bubble-positions 14s linear infinite -8s;
+  animation: bubble-positions 14s linear infinite -8s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(48) {
+  height: 18px;
+  width: 18px;
+  left: 3%;
+  opacity: 0.15;
+  -moz-box-shadow: 0px 0px 1px 2px rgba(255, 255, 255, 0.15);
+  -webkit-box-shadow: 0px 0px 1px 2px rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 0px 1px 2px rgba(255, 255, 255, 0.15);
+  -moz-animation: bubble-positions 7s linear infinite -10s;
+  -webkit-animation: bubble-positions 7s linear infinite -10s;
+  animation: bubble-positions 7s linear infinite -10s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(49) {
+  height: 17px;
+  width: 17px;
+  left: 23%;
+  opacity: 0.174;
+  -moz-box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.174);
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.174);
+  box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.174);
+  -moz-animation: bubble-positions 9s linear infinite -8s;
+  -webkit-animation: bubble-positions 9s linear infinite -8s;
+  animation: bubble-positions 9s linear infinite -8s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(50) {
+  height: 18px;
+  width: 18px;
+  left: 82%;
+  opacity: 0.182;
+  -moz-box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.182);
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.182);
+  box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.182);
+  -moz-animation: bubble-positions 12s linear infinite -3s;
+  -webkit-animation: bubble-positions 12s linear infinite -3s;
+  animation: bubble-positions 12s linear infinite -3s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(51) {
+  height: 21px;
+  width: 21px;
+  left: 12%;
+  opacity: 0.123;
+  -moz-box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.123);
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.123);
+  box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.123);
+  -moz-animation: bubble-positions 11s linear infinite -6s;
+  -webkit-animation: bubble-positions 11s linear infinite -6s;
+  animation: bubble-positions 11s linear infinite -6s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(52) {
+  height: 23px;
+  width: 23px;
+  left: 76%;
+  opacity: 0.175;
+  -moz-box-shadow: 0px 0px 7px 3px rgba(255, 255, 255, 0.175);
+  -webkit-box-shadow: 0px 0px 7px 3px rgba(255, 255, 255, 0.175);
+  box-shadow: 0px 0px 7px 3px rgba(255, 255, 255, 0.175);
+  -moz-animation: bubble-positions 10s linear infinite -3s;
+  -webkit-animation: bubble-positions 10s linear infinite -3s;
+  animation: bubble-positions 10s linear infinite -3s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(53) {
+  height: 24px;
+  width: 24px;
+  left: 12%;
+  opacity: 0.158;
+  -moz-box-shadow: 0px 0px 4px 2px rgba(255, 255, 255, 0.158);
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(255, 255, 255, 0.158);
+  box-shadow: 0px 0px 4px 2px rgba(255, 255, 255, 0.158);
+  -moz-animation: bubble-positions 8s linear infinite -2s;
+  -webkit-animation: bubble-positions 8s linear infinite -2s;
+  animation: bubble-positions 8s linear infinite -2s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(54) {
+  height: 20px;
+  width: 20px;
+  left: 28%;
+  opacity: 0.148;
+  -moz-box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.148);
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.148);
+  box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.148);
+  -moz-animation: bubble-positions 9s linear infinite -1s;
+  -webkit-animation: bubble-positions 9s linear infinite -1s;
+  animation: bubble-positions 9s linear infinite -1s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(55) {
+  height: 21px;
+  width: 21px;
+  left: 19%;
+  opacity: 0.127;
+  -moz-box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.127);
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.127);
+  box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.127);
+  -moz-animation: bubble-positions 7s linear infinite -4s;
+  -webkit-animation: bubble-positions 7s linear infinite -4s;
+  animation: bubble-positions 7s linear infinite -4s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(56) {
+  height: 17px;
+  width: 17px;
+  left: 77%;
+  opacity: 0.193;
+  -moz-box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.193);
+  -webkit-box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.193);
+  box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.193);
+  -moz-animation: bubble-positions 13s linear infinite -3s;
+  -webkit-animation: bubble-positions 13s linear infinite -3s;
+  animation: bubble-positions 13s linear infinite -3s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(57) {
+  height: 19px;
+  width: 19px;
+  left: 8%;
+  opacity: 0.12;
+  -moz-box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.12);
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.12);
+  box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.12);
+  -moz-animation: bubble-positions 12s linear infinite -7s;
+  -webkit-animation: bubble-positions 12s linear infinite -7s;
+  animation: bubble-positions 12s linear infinite -7s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(58) {
+  height: 22px;
+  width: 22px;
+  left: 21%;
+  opacity: 0.141;
+  -moz-box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.141);
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.141);
+  box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.141);
+  -moz-animation: bubble-positions 8s linear infinite -6s;
+  -webkit-animation: bubble-positions 8s linear infinite -6s;
+  animation: bubble-positions 8s linear infinite -6s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(59) {
+  height: 24px;
+  width: 24px;
+  left: 78%;
+  opacity: 0.119;
+  -moz-box-shadow: 0px 0px 1px 3px rgba(255, 255, 255, 0.119);
+  -webkit-box-shadow: 0px 0px 1px 3px rgba(255, 255, 255, 0.119);
+  box-shadow: 0px 0px 1px 3px rgba(255, 255, 255, 0.119);
+  -moz-animation: bubble-positions 9s linear infinite -4s;
+  -webkit-animation: bubble-positions 9s linear infinite -4s;
+  animation: bubble-positions 9s linear infinite -4s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(60) {
+  height: 18px;
+  width: 18px;
+  left: 50%;
+  opacity: 0.101;
+  -moz-box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.101);
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.101);
+  box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.101);
+  -moz-animation: bubble-positions 8s linear infinite -8s;
+  -webkit-animation: bubble-positions 8s linear infinite -8s;
+  animation: bubble-positions 8s linear infinite -8s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(61) {
+  height: 21px;
+  width: 21px;
+  left: 71%;
+  opacity: 0.151;
+  -moz-box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.151);
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.151);
+  box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.151);
+  -moz-animation: bubble-positions 9s linear infinite -9s;
+  -webkit-animation: bubble-positions 9s linear infinite -9s;
+  animation: bubble-positions 9s linear infinite -9s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(62) {
+  height: 21px;
+  width: 21px;
+  left: 26%;
+  opacity: 0.126;
+  -moz-box-shadow: 0px 0px 6px 4px rgba(255, 255, 255, 0.126);
+  -webkit-box-shadow: 0px 0px 6px 4px rgba(255, 255, 255, 0.126);
+  box-shadow: 0px 0px 6px 4px rgba(255, 255, 255, 0.126);
+  -moz-animation: bubble-positions 7s linear infinite -4s;
+  -webkit-animation: bubble-positions 7s linear infinite -4s;
+  animation: bubble-positions 7s linear infinite -4s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(63) {
+  height: 17px;
+  width: 17px;
+  left: 32%;
+  opacity: 0.111;
+  -moz-box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.111);
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.111);
+  box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.111);
+  -moz-animation: bubble-positions 7s linear infinite -10s;
+  -webkit-animation: bubble-positions 7s linear infinite -10s;
+  animation: bubble-positions 7s linear infinite -10s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(64) {
+  height: 24px;
+  width: 24px;
+  left: 47%;
+  opacity: 0.122;
+  -moz-box-shadow: 0px 0px 7px 3px rgba(255, 255, 255, 0.122);
+  -webkit-box-shadow: 0px 0px 7px 3px rgba(255, 255, 255, 0.122);
+  box-shadow: 0px 0px 7px 3px rgba(255, 255, 255, 0.122);
+  -moz-animation: bubble-positions 13s linear infinite -10s;
+  -webkit-animation: bubble-positions 13s linear infinite -10s;
+  animation: bubble-positions 13s linear infinite -10s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(65) {
+  height: 24px;
+  width: 24px;
+  left: 35%;
+  opacity: 0.17;
+  -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.17);
+  -webkit-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.17);
+  box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.17);
+  -moz-animation: bubble-positions 13s linear infinite -1s;
+  -webkit-animation: bubble-positions 13s linear infinite -1s;
+  animation: bubble-positions 13s linear infinite -1s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(66) {
+  height: 19px;
+  width: 19px;
+  left: 53%;
+  opacity: 0.183;
+  -moz-box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.183);
+  -webkit-box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.183);
+  box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.183);
+  -moz-animation: bubble-positions 12s linear infinite -9s;
+  -webkit-animation: bubble-positions 12s linear infinite -9s;
+  animation: bubble-positions 12s linear infinite -9s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(67) {
+  height: 19px;
+  width: 19px;
+  left: 66%;
+  opacity: 0.146;
+  -moz-box-shadow: 0px 0px 1px 3px rgba(255, 255, 255, 0.146);
+  -webkit-box-shadow: 0px 0px 1px 3px rgba(255, 255, 255, 0.146);
+  box-shadow: 0px 0px 1px 3px rgba(255, 255, 255, 0.146);
+  -moz-animation: bubble-positions 14s linear infinite -1s;
+  -webkit-animation: bubble-positions 14s linear infinite -1s;
+  animation: bubble-positions 14s linear infinite -1s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(68) {
+  height: 24px;
+  width: 24px;
+  left: 50%;
+  opacity: 0.106;
+  -moz-box-shadow: 0px 0px 7px 1px rgba(255, 255, 255, 0.106);
+  -webkit-box-shadow: 0px 0px 7px 1px rgba(255, 255, 255, 0.106);
+  box-shadow: 0px 0px 7px 1px rgba(255, 255, 255, 0.106);
+  -moz-animation: bubble-positions 8s linear infinite -8s;
+  -webkit-animation: bubble-positions 8s linear infinite -8s;
+  animation: bubble-positions 8s linear infinite -8s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(69) {
+  height: 23px;
+  width: 23px;
+  left: 55%;
+  opacity: 0.117;
+  -moz-box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.117);
+  -webkit-box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.117);
+  box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.117);
+  -moz-animation: bubble-positions 14s linear infinite -2s;
+  -webkit-animation: bubble-positions 14s linear infinite -2s;
+  animation: bubble-positions 14s linear infinite -2s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(70) {
+  height: 24px;
+  width: 24px;
+  left: 73%;
+  opacity: 0.19;
+  -moz-box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.19);
+  -webkit-box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.19);
+  box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.19);
+  -moz-animation: bubble-positions 9s linear infinite -6s;
+  -webkit-animation: bubble-positions 9s linear infinite -6s;
+  animation: bubble-positions 9s linear infinite -6s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(71) {
+  height: 24px;
+  width: 24px;
+  left: 41%;
+  opacity: 0.16;
+  -moz-box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.16);
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.16);
+  box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.16);
+  -moz-animation: bubble-positions 9s linear infinite -10s;
+  -webkit-animation: bubble-positions 9s linear infinite -10s;
+  animation: bubble-positions 9s linear infinite -10s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(72) {
+  height: 20px;
+  width: 20px;
+  left: 84%;
+  opacity: 0.179;
+  -moz-box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.179);
+  -webkit-box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.179);
+  box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.179);
+  -moz-animation: bubble-positions 11s linear infinite -9s;
+  -webkit-animation: bubble-positions 11s linear infinite -9s;
+  animation: bubble-positions 11s linear infinite -9s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(73) {
+  height: 18px;
+  width: 18px;
+  left: 67%;
+  opacity: 0.112;
+  -moz-box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.112);
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.112);
+  box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.112);
+  -moz-animation: bubble-positions 9s linear infinite -2s;
+  -webkit-animation: bubble-positions 9s linear infinite -2s;
+  animation: bubble-positions 9s linear infinite -2s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(74) {
+  height: 19px;
+  width: 19px;
+  left: 96%;
+  opacity: 0.199;
+  -moz-box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.199);
+  -webkit-box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.199);
+  box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.199);
+  -moz-animation: bubble-positions 12s linear infinite -9s;
+  -webkit-animation: bubble-positions 12s linear infinite -9s;
+  animation: bubble-positions 12s linear infinite -9s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(75) {
+  height: 20px;
+  width: 20px;
+  left: 2%;
+  opacity: 0.176;
+  -moz-box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.176);
+  -webkit-box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.176);
+  box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.176);
+  -moz-animation: bubble-positions 14s linear infinite -10s;
+  -webkit-animation: bubble-positions 14s linear infinite -10s;
+  animation: bubble-positions 14s linear infinite -10s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(76) {
+  height: 17px;
+  width: 17px;
+  left: 1%;
+  opacity: 0.108;
+  -moz-box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.108);
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.108);
+  box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.108);
+  -moz-animation: bubble-positions 9s linear infinite -8s;
+  -webkit-animation: bubble-positions 9s linear infinite -8s;
+  animation: bubble-positions 9s linear infinite -8s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(77) {
+  height: 24px;
+  width: 24px;
+  left: 30%;
+  opacity: 0.181;
+  -moz-box-shadow: 0px 0px 2px 4px rgba(255, 255, 255, 0.181);
+  -webkit-box-shadow: 0px 0px 2px 4px rgba(255, 255, 255, 0.181);
+  box-shadow: 0px 0px 2px 4px rgba(255, 255, 255, 0.181);
+  -moz-animation: bubble-positions 14s linear infinite -2s;
+  -webkit-animation: bubble-positions 14s linear infinite -2s;
+  animation: bubble-positions 14s linear infinite -2s;
+}
+/* line 62, ../sass/style.scss */
+.bg .bubble:nth-child(78) {
+  height: 18px;
+  width: 18px;
+  left: 94%;
+  opacity: 0.189;
+  -moz-box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.189);
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.189);
+  box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.189);
+  -moz-animation: bubble-positions 9s linear infinite -5s;
+  -webkit-animation: bubble-positions 9s linear infinite -5s;
+  animation: bubble-positions 9s linear infinite -5s;
+}
+/* line 62, ../sass/style.scss */
 .bg .bubble:nth-child(79) {
   height: 18px;
   width: 18px;
-  left: 69%;
-  opacity: 0.193;
-  -moz-box-shadow: 0px 0px 1px 2px rgba(255, 255, 255, 0.193);
-  -webkit-box-shadow: 0px 0px 1px 2px rgba(255, 255, 255, 0.193);
-  box-shadow: 0px 0px 1px 2px rgba(255, 255, 255, 0.193);
-  -moz-animation: bubble-positions 8s linear infinite -10s;
-  -webkit-animation: bubble-positions 8s linear infinite -10s;
-  animation: bubble-positions 8s linear infinite -10s;
+  left: 27%;
+  opacity: 0.126;
+  -moz-box-shadow: 0px 0px 7px 4px rgba(255, 255, 255, 0.126);
+  -webkit-box-shadow: 0px 0px 7px 4px rgba(255, 255, 255, 0.126);
+  box-shadow: 0px 0px 7px 4px rgba(255, 255, 255, 0.126);
+  -moz-animation: bubble-positions 11s linear infinite -3s;
+  -webkit-animation: bubble-positions 11s linear infinite -3s;
+  animation: bubble-positions 11s linear infinite -3s;
 }
-/* line 53, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 .bg .bubble:nth-child(80) {
   height: 21px;
   width: 21px;
-  left: 80%;
-  opacity: 0.107;
-  -moz-box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.107);
-  -webkit-box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.107);
-  box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.107);
-  -moz-animation: bubble-positions 7s linear infinite -1s;
-  -webkit-animation: bubble-positions 7s linear infinite -1s;
-  animation: bubble-positions 7s linear infinite -1s;
+  left: 14%;
+  opacity: 0.119;
+  -moz-box-shadow: 0px 0px 7px 3px rgba(255, 255, 255, 0.119);
+  -webkit-box-shadow: 0px 0px 7px 3px rgba(255, 255, 255, 0.119);
+  box-shadow: 0px 0px 7px 3px rgba(255, 255, 255, 0.119);
+  -moz-animation: bubble-positions 12s linear infinite -10s;
+  -webkit-animation: bubble-positions 12s linear infinite -10s;
+  animation: bubble-positions 12s linear infinite -10s;
 }
 
 @media only screen and (max-device-width: 400px) {
-  /* line 68, ../sass/style.scss */
+  /* line 77, ../sass/style.scss */
   .bg .bubble:nth-child(n+8) {
     display: none;
   }
