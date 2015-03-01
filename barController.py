@@ -34,7 +34,7 @@ import RPi.GPIO as GPIO
 import time
 
 def setup(servos):
-    pwm = [] * len(servos)
+    pwm = [None] * len(servos)
     GPIO.setmode(GPIO.BCM)
     for x in list(range(len(servos))):
         GPIO.setup(servos[x], GPIO.OUT)
