@@ -30,10 +30,7 @@
 
 # and some help from the capitalist pigs at O'Reilly
 
-try:
-	import RPi.GPIO as GPIO
-except RuntimeError:
-	print("Error importing RPi.GPIO! This is probably because you need root privileges.")
+import RPi.GPIO as GPIO
 import time
 
 def setup(servos):
@@ -49,6 +46,8 @@ def update(ingredient, angle):
     pwm[index-1].ChangeDutyCycle(duty)
 
 def pour(instructions):
+    openPos = 0
+    closedPos = 90
     assert(type(instructions) == list)
     assert(len(instructions) == 5)
     for x in range(1, 5):
@@ -65,7 +64,7 @@ def pour(instructions):
                x in range(1, len(instructions))]
     flowTimes = [flowRate * amount for amount in amounts]
     for i in len(flowTimes):
-        update(i+1, 180)
+        update(i+1, 0)
         time.sleep(flowTimes[i])
         update(i+1, 90)
 
