@@ -40,7 +40,7 @@ def update(ingredient, angle):
     servoStr = "%u=%u\n" % (ingredient, angle)
 
     with open("/dev/servoblaster", "wb") as f:
-        f.write(servoStr)
+        f.write(bytes(servoStr, 'UTF-8'))
     
 def pour(instructions):
     turnTime = 1 # seconds for which servo turns either way
