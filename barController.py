@@ -40,14 +40,14 @@ def setup(servos):
         GPIO.setup(servos[x], GPIO.OUT)
         pwm[x] = GPIO.PWM(servos[x], 100)
         pwm[x].start(5)
+    return pwm
 
-def update(ingredient, angle):
+def update(ingredient, angle, pwm):
     duty = float(angle) / 10.0 + 2.5
     pwm[index-1].ChangeDutyCycle(duty)
 
 def pour(instructions):
-    openPos = 0
-    closedPos = 90
+    turnTime = 1 # seconds for which servo turns either way
     assert(type(instructions) == list)
     assert(len(instructions) == 5)
     for x in range(1, 5):
@@ -56,19 +56,17 @@ def pour(instructions):
         assert(instructions[x] <= 1)
     volume = instructions[0]
     servos = [18, 19, 20, 21]
-    setup(servos)
+    pwm = setup(servos)
     for x in list(range(1, 5)):
-        update(x, 90)
+        update(x, 90, pwm)
     flowRate = 2 # seconds per milliliter
     amounts = [(float(volume) * instructions[x]) for
                x in list(range(1, len(instructions)))]
     flowTimes = [flowRate * amount for amount in amounts]
     for i in len(flowTimes):
-        update(i+1, 0)
+        update(i+1, 180, pwm)
+        time.sleep(turnTime)
         time.sleep(flowTimes[i])
-        update(i+1, 90)
-
-
-
-
-
+        update(i+1, 0, pwm)
+        time.sleep(turnTime)
+        update(i+1, 90, pwm)
