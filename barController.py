@@ -2,6 +2,10 @@
 # made by rajat mehndiratta (github/rajatmehndiratta) @ HackIllinois s'15
 # as part of project Dr. Dre's Mix Machine
 
+# USES SERVOBLASTER
+
+# (https://github.com/richardghirst/PiBits/tree/master/ServoBlaster)
+
 ###########################################
 
 
@@ -30,27 +34,14 @@
 
 # and some help from the capitalist pigs at O'Reilly
 
-import RPi.GPIO as GPIO
 import time
 
-def setup(servos):
-    pwm = [None] * len(servos)
-    GPIO.setmode(GPIO.BCM)
-    for x in list(range(len(servos))):
-        GPIO.setup(servos[x], GPIO.OUT)
-        pwm[x] = GPIO.PWM(servos[x], 100)
-        pwm[x].start(5)
-    return pwm
+def update(ingredient, angle):
+    servoStr = "%u=%u\n" % (servoChannel, position)
 
-def update(ingredient, angle, pwm=None):
-    if pwm == None:
-        GPIO.setmode(GPIO.BCM)
-        GPIO.setup(17+ingredient, GPIO.OUT)
-        pwm = GPIO.PWM(17+ingredient, 100)
-        pwm.start(5)
-    duty = float(angle) / 10.0 + 2.5
-    pwm[ingredient-1].ChangeDutyCycle(duty)
-
+    with open("/dev/servoblaster", "wb") as f:
+        f.write(servoStr)
+    
 def pour(instructions):
     turnTime = 1 # seconds for which servo turns either way
     assert(type(instructions) == list)
@@ -60,16 +51,15 @@ def pour(instructions):
         assert(instructions[x] >= 0)
         assert(instructions[x] <= 1)
     volume = instructions[0]
-    servos = [18, 19, 20, 21]
-    pwm = setup(servos)
+    servos = [1, 2, 3, 4] # channels 17, 18, 21, 22
     for x in list(range(1, 5)):
-        update(x, 90, pwm)
+        update(x, 90)
     flowRate = 2 # seconds per milliliter
     amounts = [(float(volume) * instructions[x]) for
                x in list(range(1, len(instructions)))]
     flowTimes = [(flowRate * amount) for amount in amounts]
     for i in list(range(len(flowTimes))):
-        update(i+1, 180, pwm)
+        update(i+1, 180)
         time.sleep(turnTime)
         update(i+1, 90, pwm)
         time.sleep(flowTimes[i])
