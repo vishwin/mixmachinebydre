@@ -44,6 +44,7 @@ def setup(servos):
 
 def update(ingredient, angle, pwm=None):
     if pwm == None:
+        GPIO.setmode(GPIO.BCM)
         GPIO.setup(17+ingredient, GPIO.OUT)
         pwm = GPIO.PWM(17+ingredient, 100)
         pwm.start(5)
