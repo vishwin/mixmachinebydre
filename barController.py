@@ -32,9 +32,17 @@
 # M A D E    W I T H
 # CAFFEINE + FREEDOM
 
-# and some help from the capitalist pigs at O'Reilly
+# LED mode now
 
 import time
+import RPi.GPIO as GPIO
+
+def setup():
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(7, GPIO.OUT)
+    GPIO.setup(8, GPIO.OUT)
+    GPIO.setup(9, GPIO.OUT)
+    GPIO.setup(10.GPIO.OUT)
 
 def update(ingredient, angle):
     servoStr = "%u=%u\n" % (ingredient, angle)
@@ -43,6 +51,7 @@ def update(ingredient, angle):
         f.write(bytes(servoStr, 'UTF-8'))
     
 def pour(instructions):
+    setup()
     turnTime = 1 # seconds for which servo turns either way
     assert(type(instructions) == list)
     assert(len(instructions) == 5)
@@ -52,17 +61,14 @@ def pour(instructions):
         assert(instructions[x] <= 1)
     volume = instructions[0]
     servos = [1, 2, 3, 4] # channels 17, 18, 21, 22
-    for x in list(range(1, 5)):
-        update(x, 150)
+    ledPins = [7,8,9,10]
+    # for x in list(range(1, 5)):
+        # update(x, 150)
     flowRate = 2 # seconds per milliliter
     amounts = [(float(volume) * instructions[x]) for
                x in list(range(1, len(instructions)))]
     flowTimes = [(flowRate * amount) for amount in amounts]
     for i in list(range(len(flowTimes))):
-        update(i+1, 90)
-        time.sleep(turnTime)
-        update(i+1, 150, pwm)
+        GPIO.output(ledPins[i], True)
         time.sleep(flowTimes[i])
-        update(i+1, 180, pwm)
-        time.sleep(turnTime)
-        update(i+1, 150, pwm)
+        GPIO.output(ledPins[i], False)
