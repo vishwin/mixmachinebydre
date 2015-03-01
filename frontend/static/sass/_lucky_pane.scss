@@ -1,0 +1,43 @@
+.lucky-pane {
+	$width: 20em;
+	$height: 18em;
+	@include centered-pane($width, $height);
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	border-radius: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	.back-bttn {
+		width: 20%;
+		float: left;
+		height: 1.2em;
+	}
+
+	.mix-bttn {
+		width: 72%;
+		float: left;
+		margin-left: 1em;
+	}
+
+	// Drink size selector
+	label { display: inline-block; }
+	label > input {	// Hide radio buttons
+		visibility: hidden;
+		position: absolute;	// Remove from document flow
+	}
+	label > input + img {
+		cursor: pointer;
+		border:2px solid transparent;
+		@include border-radius(10px);
+		@include transition(border-color 0.5s);
+	}
+	label > input:checked + img { /* (RADIO CHECKED) IMAGE STYLES */
+		border-color: #eee;
+	}
+	label span {
+		display: block;
+		text-align: center;
+		font-size: 0.9em;
+	}
+}
