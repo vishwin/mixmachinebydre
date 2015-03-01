@@ -42,7 +42,11 @@ def setup(servos):
         pwm[x].start(5)
     return pwm
 
-def update(ingredient, angle, pwm):
+def update(ingredient, angle, pwm=None):
+    if pwm == None:
+        GPIO.setup(17+ingredient, GPIO.OUT)
+        pwm = GPIO.PWM(17+ingredient, 100)
+        pwm.start(5)
     duty = float(angle) / 10.0 + 2.5
     pwm[ingredient-1].ChangeDutyCycle(duty)
 
