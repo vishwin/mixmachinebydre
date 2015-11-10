@@ -11,7 +11,7 @@
 
 #@TODO:
 
-# TEST ON PI TO MAKE SURE IT WORKS
+# TEST ON PI TO MAKE SURE IT WORKS ..tested
 
 ##########################################
 
